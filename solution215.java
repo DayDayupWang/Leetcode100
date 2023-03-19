@@ -1,11 +1,15 @@
+import java.util.Arrays;
+
 public class solution215 {
     public int findKthLargest(int[] nums, int k) {
-
+        Arrays.sort(nums);
+        int count = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            count++;
+            if (count == k) {
+                return nums[i];
+            }
+        }
     }
 
-    private void swap(int[] nums, int i, int j) {
-        int tmp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = tmp;
-    }
 }
