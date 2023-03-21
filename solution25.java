@@ -51,6 +51,11 @@ public class solution25 {
             ListNode head1 = pre.next;
             // 翻转
             while (pre.next != tail) {
+                // prev 1 2 3
+                // 创建一个用于调换的节点指向1;
+                // 让prev接替1
+                // 让1接替3
+                // 让3指向1
                 ListNode curr = pre.next;
                 // 给pre新的待翻转头节点
                 pre.next = curr.next;

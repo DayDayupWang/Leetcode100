@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
-public class solution102 {
+import javax.naming.spi.DirStateFactory.Result;
+
+public class solution102_1 {
     public static void main(String[] args) {
 
     }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
-        Queue<TreeNode> que = new LinkedList<TreeNode>();
-        ArrayList<List<Integer>> result = new ArrayList<List<Integer>>();
+        LinkedList<TreeNode> que = new LinkedList<TreeNode>();
+        ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
         if (root != null) {
             que.offer(root);
         }
@@ -19,8 +20,7 @@ public class solution102 {
             ArrayList<Integer> al = new ArrayList<Integer>();
             while (size > 0) {
                 TreeNode tmpNode = que.poll();
-
-                al.add(tmpNode.val); // 需要关注的输出操作
+                al.add(tmpNode.val);
                 if (tmpNode.left != null) {
                     que.offer(tmpNode.left);
                 }
@@ -29,10 +29,9 @@ public class solution102 {
                 }
                 size--;
             }
-            result.add(al);
+            res.add(al);
+
         }
-
-        return result;
+        return res;
     }
-
 }
