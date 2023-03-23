@@ -1,6 +1,8 @@
 public class offer43 {
+
     public static void main(String[] args) {
 
+        
     }
 
     public int countDigitOne(int n) {

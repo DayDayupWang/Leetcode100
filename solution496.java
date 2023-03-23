@@ -1,6 +1,13 @@
 import java.util.HashMap;
 import java.util.Stack;
 
+
+/**
+ * Innersolution496
+ */
+
+
+    
 public class solution496 {
     public static void main(String[] args) {
 
